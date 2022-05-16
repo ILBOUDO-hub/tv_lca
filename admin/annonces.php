@@ -71,7 +71,7 @@ tr:nth-child(even) {
             </div>
             <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;"> 
     Last access : <?php echo " Aujourd'hui le ". date('d / M / Y H:m:s ').""; ?> &nbsp; 
-    <a href="users.php" class="btn btn-danger square-btn-adjust">Logout</a></div>
+    <a href="admin.php" class="btn btn-danger square-btn-adjust">Logout</a></div>
     </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
