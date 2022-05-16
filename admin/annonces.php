@@ -72,31 +72,31 @@ tr:nth-child(even) {
             <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;"> 
     Last access : <?php echo " Aujourd'hui le ". date('d / M / Y H:m:s ').""; ?> &nbsp; 
     <a href="users.php" class="btn btn-danger square-btn-adjust">Logout</a></div>
-        </nav>   
+    </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+				        <li class="text-center">
                     <img src="assets/img/logo.png" class="user-image img-responsive"/>
-					</li>
+					      </li>
                      <li>
-                        <a class="active-menu" href="annonces.php"><i class="fa fa-desktop fa-3x"></i> Annonces</a>
+                        <a href="annonces.php"><i class="fa fa-desktop fa-3x"></i> Annonces</a>
                     </li>
                     <li>
-                        <a  href="media.php"><i class="fa fa-qrcode fa-3x"></i> Medias</a>
+                        <a href="media.php"><i class="fa fa-qrcode fa-3x"></i> Medias</a>
                     </li>
                     <li>
-                        <a href="replay_sender.php"><i class="fa fa-check-circle fa-3x"></i> Emissions</a>
+                        <a class="active-menu" href="replay_sender.php"><i class="fa fa-check-circle fa-3x"></i> Emissions</a>
                     </li>
 					<li>
-                        <a   href="news_sender.php"><i class="fa fa-bar-chart-o fa-3x"></i> News</a>
-                    </li>		
+                        <a href="news_sender.php"><i class="fa fa-bar-chart-o fa-3x"></i> News</a>
+                    </li>	
                 </ul>
                
             </div>
             
-        </nav>  
+        </nav>   
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
@@ -162,7 +162,7 @@ tr:nth-child(even) {
 			echo "<tr>\n";
 			echo "<td> <img class=\"img-responsive\" src=\"$photo\" style=\"height: 100px;width: 200px;margin-top: 10px\" alt=\"Grooming Photo\"> </td>\n";
 			echo "<td>" . $utilisateur["commentaires"] . "</td>\n";
-			echo "<td><a href='a_supprimerok.php?id_annonces=" . $utilisateur["id_annonces"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\">Supprimer</a></td>\n";
+			echo "<td><a href='a_supprimerok.php?id_annonces=" . $utilisateur["id_annonces"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\" onclick=\"return confirm('Etes vous sûre de vouloir supprimer ?')\">Supprimer</a></td>\n";
 			echo "</tr>\n";
 		}
 		echo "</table>\n";

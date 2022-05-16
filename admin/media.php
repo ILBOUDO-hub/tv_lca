@@ -79,19 +79,17 @@ tr:nth-child(even) {
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+				          <li class="text-center">
                     <img src="assets/img/logo.png" class="user-image img-responsive"/>
-					</li>
-			
-					
+					        </li>
                     <li>
-                        <a  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
-                    </li>
-                     <li>
                         <a href="annonces.php"><i class="fa fa-desktop fa-3x"></i> Annonces</a>
                     </li>
                     <li>
                         <a class="active-menu" href="media.php"><i class="fa fa-qrcode fa-3x"></i> Medias</a>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="replay_sender.php"><i class="fa fa-check-circle fa-3x"></i> Emissions</a>
                     </li>
 					          <li>
                         <a   href="news_sender.php"><i class="fa fa-bar-chart-o fa-3x"></i> News</a>
@@ -181,7 +179,7 @@ tr:nth-child(even) {
 			echo "<td> <img class=\"img-responsive\" src=\"$photo\" style=\"height: 100px;width: 200px;margin-top: 10px\" alt=\"Grooming Photo\"> </td>\n";
 			echo "<td>" . $utilisateur["titre"] . "</td>\n";
 			echo "<td>" . $utilisateur["commentaire"] . "</td>\n";
-			echo "<td><a href='media_supprimerok.php?id_media=" . $utilisateur["id_media"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\">Supprimer</a></td>\n";
+			echo "<td><a href='media_supprimerok.php?id_media=" . $utilisateur["id_media"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\" onclick=\"return confirm('Etes vous sûre de vouloir supprimer ?')\">Supprimer</a></td>\n";
 			echo "</tr>\n";
 		}
 		echo "</table>\n";

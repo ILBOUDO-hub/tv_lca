@@ -214,7 +214,7 @@ tr:nth-child(even) {
 			echo "<td> <img class=\"img-responsive\" src=\"$photo\" style=\"height: 100px;width: 200px;margin-top: 10px\" alt=\"Grooming Photo\"> </td>\n";
 			echo "<td>" . $utilisateur["auteur"] . "</td>\n";
       echo "<td><a href='news_view.php?id_news=" . $utilisateur["id_news"] ."'>$titre</a></td>\n";
-			echo "<td><a href='news_supprimerok.php?id_news=" . $utilisateur["id_news"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\">Supprimer</a></td>\n";
+			echo "<td><a href='news_supprimerok.php?id_news=" . $utilisateur["id_news"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\" onclick=\"return confirm('Etes vous sûre de vouloir supprimer ?')\">Supprimer</a></td>\n";
 			echo "</tr>\n";
 		}
 		echo "</table>\n";

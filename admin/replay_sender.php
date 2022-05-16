@@ -81,9 +81,9 @@ tr:nth-child(even) {
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+				        <li class="text-center">
                     <img src="assets/img/logo.png" class="user-image img-responsive"/>
-					</li>
+					      </li>
                      <li>
                         <a href="annonces.php"><i class="fa fa-desktop fa-3x"></i> Annonces</a>
                     </li>
@@ -200,7 +200,7 @@ tr:nth-child(even) {
 			echo "<td>" . $utilisateur["titre"] . "</td>\n";
             echo "<td>" . $utilisateur["type_emissions"] . "</td>\n";
 			echo "<td>" . $utilisateur["commentaire"] . "</td>\n";
-			echo "<td><a href='replay_supprimerok.php?id_emission=" . $utilisateur["id_emission"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\">Supprimer</a></td>\n";
+			echo "<td><a href='replay_supprimerok.php?id_emission=" . $utilisateur["id_emission"] ."' class=\"btn btn-danger navbar-btn\" role=\"button\" onclick=\"return confirm('Etes vous sûre de vouloir supprimer ?')\">Supprimer</a></td>\n";
 			echo "</tr>\n";
 		}
 		echo "</table>\n";
